@@ -1,0 +1,139 @@
+a{
+    text-decoration: none;
+    color:white;
+    text-decoration-style: none;
+}
+a:hover{
+    text-decoration: none;
+}
+a:checked{
+    color: gray;
+}
+
+nav{
+    color:white
+}
+
+body{
+
+    background-color:#282828 ;
+    color:white
+}
+
+
+ li{
+
+list-style: none;
+
+}
+
+.carousel-item a{
+    text-decoration: none;
+}
+
+
+.nav-item{
+    display: inline;
+
+}
+
+.navbar-nav{
+    display: inline-block;
+    color:white;
+}
+
+.navbar-nav .dropdown-menu{
+    position:absolute;
+}
+
+#home_side li{
+ padding: 7px;
+
+}
+
+.carousel-item {
+
+    padding-top:40px;
+}
+
+#date{
+    width:280px;
+background-color:#282828;
+padding: 10px;
+border-radius: 40px;
+color: white;
+
+}
+.footer{
+
+    padding-top:40px;
+    height: auto;
+    padding-bottom: 30px;
+    color:white;
+
+
+}
+
+.footer ul li{
+    padding:15px;
+    display: inline-block;
+}
+.footer ul li a{
+    text-decoration: none;
+}
+
+.navbar{
+    position:sticky;
+}
+
+.row{
+
+   margin-top: 30px;
+}.card{
+
+    background-color:#282828 ;
+    color:white;
+}
+ul li span{
+
+    padding-right:10px;
+}
+@media screen and (min-width:800px){
+
+div.scrollMenu{
+    display: none;
+}
+
+}
+@media screen and (max-width:800px){
+
+    div.scrollMenu{
+display:flex;
+        background-color: #333;
+        overflow: auto;
+        white-space: nowrap;
+        top: 0px;
+
+    }
+    div.scrollMenu a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+
+    }
+.navbar .dropdown{
+display: none;
+
+}
+
+    div.scrollMenu a:hover{
+        background-color: #777;
+    }
+
+    div.scrollMenu::-webkit-scrollbar{
+        display: none;
+    }
+
+}

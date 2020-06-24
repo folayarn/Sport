@@ -23,7 +23,7 @@
         <h5 class="pull-right"> <span class="fa fa-eye" style="padding-right:8px">
     </span>{{$post->visit_count}}</h5></div>
 
-    <img src="../storage/images/{{$post->image}}" width="800px" height="400px" class="img-fluid" />
+    <img  src="{{Storage::disk('s3')->url('images/' .$post->image)}}"   width="800px" height="400px" class="img-fluid" />
     <br/>
     <br/>
 <div style="padding-bottom: 20px">

@@ -265,6 +265,8 @@ return redirect()->route('post.show',['id'=>$id]);
     public function destroy($id)
     {
         $posts=Post::findorfail($id);
+        Storage::delete($posts->image);
+
         $posts->delete();
         return view('/home')->with('success', 'this post that was not necessary was deleted succesfully');
     }

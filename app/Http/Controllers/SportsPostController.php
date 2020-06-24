@@ -116,7 +116,7 @@ if($request->hasFile('file')){
            $name = time() . $file->getClientOriginalName();
            $filePath = 'images/' . $name;
            Storage::disk('s3')->put($filePath, file_get_contents($file));
-          $fileName= Storage::url($filePath);
+          
 }
 
 $posts= new Post;
@@ -125,7 +125,7 @@ $posts= new Post;
  $posts->team_id=$request->input('teams');
  $posts->category_id=$request->input('type');
  $posts->user_id=auth()->user()->id;
- $posts->image=$fileName;
+ $posts->image=$filePath;
 $posts->save();
 
 return redirect('/post/create')->with('success','The Post was Published Successfully');
@@ -239,7 +239,7 @@ return redirect()->route('post.show',['id'=>$id]);
             $name = time() . $file->getClientOriginalName();
             $filePath = 'images/' . $name;
             Storage::disk('s3')->put($filePath, file_get_contents($file));
-           $fileName= Storage::url($filePath);
+          
 
         }
 
@@ -249,7 +249,7 @@ return redirect()->route('post.show',['id'=>$id]);
          $posts->team_id=$request->input('teams');
          $posts->category_id=$request->input('type');
          $posts->user_id=auth()->user()->id;
-         $posts->image=$fileName;
+         $posts->image=$filePath;
         $posts->save();
         return redirect('/post/create')->with('success','The Post was
          Updated Successfully');

@@ -15,7 +15,7 @@
 <a href="/post/{{$post->id}}">
 <div class="card-body">
 <div class="pull-left" style="margin-right:20px">
-<img class="img-fluid" src="../storage/images/{{$post->image}}" width="70px" height="70px" />
+<img class="img-fluid" src="{{Storage::disk('s3')->url($post->image)}}" width="70px" height="70px" />
 </div>
 <div class="text-left">
 {{$post->title}}<br>
@@ -62,7 +62,7 @@ style="background-color: rgb(250, 7, 7); padding:3px;margin-top:10px">
                 @foreach ($slide->take(10) as $key=> $post )
               <div class=" carousel-item {{ $key==0 ? 'active':'' }} ">
                 <img class="d-block w-100 img-fluid "
-                src="../storage/images/{{$post->image}}"/>
+                src="{{Storage::disk('s3')->url($post->image)}}"/>
                 <div class="carousel-caption d-md-block">
                     <h2 class="text-left">{{$post->title}}
     <a  href="/post/{{$post->id}}"><button class="btn btn-danger"><span class="fa fa-eye" style="padding-right:8px"></span>Read More...</button></a>
